@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="522" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid x:Name="frmMain">
+
         <Label x:Name="lblTitle" Content=" Doughnuts - Bake &amp; Sale" FontSize="24" FontWeight="Bold" Margin="224,28,261,429"/>
         <GroupBox x:Name="gbRaised" Header="Raised" FontSize="12" Margin="180,97,440,299" FontWeight="Bold">
             <Canvas>
@@ -41,8 +42,23 @@
             <Button x:Name="btnRemoveItem" Content="Remove Item" Canvas.Left="534" Canvas.Top="354" Height="22" Width="170"/>
             <Button x:Name="btnCheckout" Content="Checkout" Canvas.Left="534" Canvas.Top="442" Height="22" Width="170" FontWeight="Bold"/>
         </Canvas>
-
-
-
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="116">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="LemonMenuItem" Header="Lemon"/>
+                        <MenuItem x:Name="ChocolateMenuItem" Header="Chocolate"/>
+                        <MenuItem x:Name="VanillaMenuItem" Header="Vanilla"/>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
